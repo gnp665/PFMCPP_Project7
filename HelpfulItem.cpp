@@ -2,5 +2,5 @@
 
 void HelpfulItem::use(Character *character)
 {
-    
+    character = nullptr;  // gnp temp
 }

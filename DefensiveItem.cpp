@@ -7,6 +7,9 @@
 
 void DefensiveItem::use(Character* character)
 {
-    assert(false); 
+    //assert(false); 
+
+    character = nullptr;  // gnp temp
+    
     //make your defensive item use the appropriate Utility helper functions
 }
