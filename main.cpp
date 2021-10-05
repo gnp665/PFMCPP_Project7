@@ -73,15 +73,16 @@ it's very easy to mess this task up.
 int main()
 {
 
-    #if 0
+    #if 1
 
                       //name, hit points, armor. 
     Dwarf dwarf { "Maldin the Dwarf", 3, 1 };
     Paladin paladin { "Warrick the Paladin", 5, 2 };
-    Dragon dragon { "Garry The Dragon", 200, 50 };
-    DragonSlayer dragonSlayer { "Virgil the Dragon Slayer", 8, 5 };
+    //Dragon dragon { "Garry The Dragon", 200, 50 };
+    //DragonSlayer dragonSlayer { "Virgil the Dragon Slayer", 8, 5 };
 
-    
+    #endif
+    #if 0
     
     std::cout << "\nstart of battle" << std::endl;
 
