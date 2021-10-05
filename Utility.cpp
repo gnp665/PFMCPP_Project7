@@ -63,6 +63,7 @@ void useDefensiveItem(Character* character, Item& item)
     {
         //dragons don't need defensive items
     }  
+
 }
 void useHelpfulItem(Character* character, Item* item)
 {
@@ -82,6 +83,7 @@ void useHelpfulItem(Character* character, Item* item)
     {
         //dragons don't carry helpful items!
     }
+
 }
 void useAttackItem(Character* character, Item* item)
 {
@@ -93,17 +95,16 @@ void useAttackItem(Character* character, Item* item)
     {
         ch_paladin->boostAttackDamage(item->getBoost() * 1.33);
     }
-    else if( auto* ch_dragon = dynamic_cast<DragonSlayer*>(character))
+    else if( auto* ch_dslayer = dynamic_cast<DragonSlayer*>(character))
     {
-        
-        //assert(false);
-
         //DragonSlayers get a 10x boost when attacking dragons, from their attack item.
         //so their attack item should boost their attack damage by a factor of 10
         //this means you need to GET the attack damage, multiply it by the item's boost, and BOOST the attackDamage with that multiplied value.  
         //check Character.h for available member functions you can use.
+
+        ch_dslayer->boostAttackDamage( ch_dslayer->getAttackDamage() * item->getBoost() );
     }
-    else if( auto* ch_dragon2 = dynamic_cast<Dragon*>(character) )
+    else if( auto* ch_dragon = dynamic_cast<Dragon*>(character) )
     {
         //dragons don't carry attack items!
     }

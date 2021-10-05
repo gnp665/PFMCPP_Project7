@@ -1,6 +1,7 @@
 #include "HelpfulItem.h"
+#include "Utility.h"
 
 void HelpfulItem::use(Character *character)
 {
-    character = nullptr;  // gnp temp
+    useHelpfulItem(character, this);
 }
